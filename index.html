@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <div class="content-container oppacity-invis">
+    <header class="header">
+      <div class="player">
+        <!-- <audio src=""></audio> -->
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <div class="player-track-name"></div>
+        <div class="progress">
+          <!-- Progress -->
+          <div class="duration-player">
+            <div id="progress"></div>
+          </div>
+
+          <!-- Timer -->
+          <div class="duration-timer">
+            <div id="timer" class="timer-header">0:00</div>
+            <div id="duration">0:00</div>
+          </div>
+        </div> <!-- progress -->
+
+        <!-- Volume -->
+        <div class="volume-header">
+          <div id="mute-button" class="mute-button">
+            <svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M832 352v1088q0 26-19 45t-45 19-45-19l-333-333h-262q-26 0-45-19t-19-45v-384q0-26 19-45t45-19h262l333-333q19-19 45-19t45 19 19 45zm384 544q0 76-42.5 141.5t-112.5 93.5q-10 5-25 5-26 0-45-18.5t-19-45.5q0-21 12-35.5t29-25 34-23 29-36 12-56.5-12-56.5-29-36-34-23-29-25-12-35.5q0-27 19-45.5t45-18.5q15 0 25 5 70 27 112.5 93t42.5 142zm256 0q0 153-85 282.5t-225 188.5q-13 5-25 5-27 0-46-19t-19-45q0-39 39-59 56-29 76-44 74-54 115.5-135.5t41.5-173.5-41.5-173.5-115.5-135.5q-20-15-76-44-39-20-39-59 0-26 19-45t45-19q13 0 26 5 140 59 225 188.5t85 282.5zm256 0q0 230-127 422.5t-338 283.5q-13 5-26 5-26 0-45-19t-19-45q0-36 39-59 7-4 22.5-10.5t22.5-10.5q46-25 82-51 123-91 192-227t69-289-69-289-192-227q-36-26-82-51-7-4-22.5-10.5t-22.5-10.5q-39-23-39-59 0-26 19-45t45-19q13 0 26 5 211 91 338 283.5t127 422.5z"
+                fill="#fff" />
+            </svg>
+          </div>
+          <input id="soundVolume" type="range" min="0" max="1" step="0.01">
+        </div>
+        <ul class="play-list">
+        </ul>
+
+      </div>
+      <div class="weather">
+        <input type="text" class="city" placeholder="Town" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="[Enter name]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="settings-button"></button>
+      <div class="settings invisible">
+        <div class="settings__type none-display">
+          <button class="settings-close-button"></button>
+          <div class="settings__type_item item_blocks"><span class="scale"> Block display</span></div>
+          <div class="settings__type_item item_language"><span class="scale"> Select language</span></div>
+          <div class="settings__type_item item_bg-source"><span class="scale"> Background image</span></div>
+        </div>
+        <div class="settings__list none-display">
+          <div class="settings__list_item settings__block_view active">
+            <ul class="settings-name">
+              <li class="settings-name_item">Time</li>
+              <li class="settings-name_item">Date</li>
+              <li class="settings-name_item">Greeting</li>
+              <li class="settings-name_item">Quote</li>
+              <li class="settings-name_item">Weather</li>
+              <li class="settings-name_item">Audio</li>
+            </ul>
+            <div class="settings-value">
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-settings">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings__list_item settings__lang">
+            <div class="settings-name">
+              Language
+            </div>
+            <div class="settings-value">
+              <label for="ruRU">
+                Russian
+                <input type="radio" id="ruRU">
+              </label>
+              <label for="enEN">
+                English
+                <input type="radio" id="enEN">
+              </label>
+
+            </div>
+          </div>
+          <div class="settings__list_item settings__bg-img">
+            <ul class="settings-name">
+              <li class="settings-name_item">GitHub</li>
+              <li class="settings-name_item">Unsplash API</li>
+              <li class="settings-name_item">Flickr API</li>
+            </ul>
+            <div class="settings-value">
+              <label for="gitHub">
+                <input type="radio" id="gitHub">
+              </label>
+              <label for="unsplash">
+                <input type="radio" id="unsplash">
+              </label>
+              <label for="flickr">
+                <input type="radio" id="flickr">
+              </label>
+
+              <select>
+                <option>nature</option>
+                <option>animals</option>
+                <option>mountains</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-container">
+        <button class="change-quote"></button>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
